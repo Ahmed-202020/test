@@ -1,0 +1,49 @@
+@import "../../../styles" ;
+.footer{
+  .items{
+    margin-top: 20px;
+    .item{
+      display: flex ;
+      align-items: center;
+      .icon{
+        color: $dark-color;
+        margin-#{$right}:20px ;
+        font-size: 15pt;
+      }
+      .text{
+        font-size: 14pt;
+        color: $hint;
+      }
+      &:nth-child(even){
+        margin-block: 35px ;
+      }
+    }
+  }
+  .social{
+    padding-top: 100px;
+    margin-bottom: 50px;
+    .image{
+      width: 200px;
+      margin-inline: auto;
+      margin-bottom: 40px;
+    }
+    .items-social{
+      text-align: center;
+      a{
+        color: $dark-color;
+        &:hover{
+          filter: brightness(80%);
+          -webkit-filter: brightness(80%);
+        }
+      }
+      a+a{
+        margin-#{$left}:50px ;
+      }
+    }
+  }
+  .copy-right{
+    text-align: center ;
+    color: $hint ;
+    font-size: 12pt;
+  }
+}

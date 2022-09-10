@@ -1,0 +1,9 @@
+@import "../../../styles";
+@import "../../../text-style" ;
+
+.contact{
+  padding-top: 100px ;
+  .need-help{
+    @extend %style-text ;
+  }
+}

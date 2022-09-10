@@ -1,0 +1,122 @@
+@import "./styles" ;
+%sign{
+  .sign{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 0 3px 0 $bg-color;
+    &>p {
+      font-size: 14pt;
+    }
+    .form-group {
+      &>label {
+        font-size: 12pt;
+      }
+
+      .form-control {
+        padding-#{$right}: 35px;
+        border-top: 0;
+        border-inline: 0;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .custom-input {
+        position: relative;
+
+        #eye {
+          position: absolute;
+          #{$right}: 10px;
+          width: 22px;
+          bottom: 12px;
+          cursor: pointer;
+        }
+      }
+
+      .forget {
+        display: flex;
+        justify-content: flex-end;
+
+        label {
+          font-size: 14pt;
+
+          input {
+            display: none;
+          }
+
+          input+span {
+            position: relative;
+            margin-#{$right}: 18px;
+          }
+
+          input+span::before {
+            position: absolute;
+            content: "";
+            #{$left}: -28px;
+            top: 4px;
+            width: 20px;
+            height: 18px;
+            border: 2px solid $btn-color;
+          }
+
+          input:checked+span::before {
+            position: absolute;
+            content: url("./assets/icons/Icon\ material-done.svg");
+            color: white !important;
+            #{$left}: -28px;
+            top: 4px;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            line-height: 15px;
+            background-color: $bg-color;
+            border: 2px solid $bg-color;
+          }
+        }
+
+        a {
+          font-size: 14pt;
+          color: $btn-color ;
+        }
+      }
+
+      .btn {
+        background-color: $bg-color;
+        color: white;
+        padding-block: 8px;
+        font-size: 16pt;
+
+        &:hover {
+          filter: brightness(90%);
+          -webkit-filter: brightness(90%);
+        }
+      }
+
+      .have-account {
+        text-align: center;
+        font-size: 14pt;
+
+        a {
+          color: $btn-color;
+        }
+      }
+    }
+  }
+}
+.text-err{
+  font-size: 13pt ;
+  color: red;
+  text-align: #{$right} ;
+  svg{
+    margin-#{$left}:5px;
+  }
+}

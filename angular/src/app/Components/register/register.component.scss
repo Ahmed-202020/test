@@ -1,0 +1,6 @@
+@import "../../../styles" ;
+@import "../../../forms" ;
+
+.register {
+  @extend %sign;
+}

@@ -1,0 +1,92 @@
+@import "../../../styles" ;
+
+
+.navbar {
+  .navbar-brand {
+    font-weight: bold;
+    color: $dark-color;
+    font-size: 17pt;
+    margin: 0;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .navbar-nav {
+    &:first-of-type {
+      margin-#{$left}: 3rem;
+      padding-#{$left}: 3rem;
+
+      .nav-item {
+        margin-#{$right}: 20px;
+
+        .nav-link {
+          color: $black;
+          font-size: 12.5pt;
+        }
+      }
+    }
+
+    &:last-of-type {
+      margin-#{$left}: auto;
+      align-items: center;
+
+      .nav-item {
+        .nav-link {
+          font-size: 13pt;
+        }
+
+        &:nth-child(1) {
+          .nav-link {
+            color: $dark-color;
+
+            &:hover {
+              filter: brightness(80%);
+              -webkit-filter: brightness(80%);
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          .nav-link {
+            color: $dark-color;
+            margin-#{$left}: 15px;
+            font-weight: bold;
+
+            &:hover {
+              filter: brightness(80%);
+              -webkit-filter: brightness(80%);
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          margin-#{$left}: 30px;
+          background-color: $dark-color;
+
+          &:hover {
+            filter: brightness(110%);
+            -webkit-filter: brightness(110%);
+          }
+
+          .nav-link {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .nav-item {
+      .nav-link {
+        &:hover {
+          color: $bg-color;
+        }
+      }
+    }
+  }
+}
+
+.active-link {
+  color: $dark-color  !important;
+}

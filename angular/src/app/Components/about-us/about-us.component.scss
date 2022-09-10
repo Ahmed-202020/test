@@ -1,0 +1,9 @@
+@import "../../../styles";
+@import "../../../text-style" ;
+
+.about {
+  padding-top: 100px;
+  .show-case {
+    @extend %style-text;
+  }
+}

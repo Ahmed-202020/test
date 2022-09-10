@@ -1,0 +1,38 @@
+<div class="login  py-5">
+  <app-header></app-header>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="sign bg-white p-5">
+          <h2 class="h4 text-center mb-4">{{"login" | translate}}</h2>
+          <p class="text-black-50 text-center mb-4">{{"welcome" | translate}}</p>
+          <form [formGroup]="loginForm" class="form-group">
+            <label class="text-black-50 mb-2" for="email">{{"email" | translate}} <span class = "text-danger">*</span></label>
+            <input [ngClass]="{'is-valid': !(loginForm.get('email')?.errors)}" formControlName = "email" type="email" id="email" placeholder='{{"holderMail" | translate}}' class="form-control mb-4"/>
+            <div *ngIf="loginForm.get('email')?.errors&&loginForm.get('email')?.touched">
+              <p class="text-err" *ngIf="loginForm.get('email')?.getError('required')">This feild is required</p>
+              <p class="text-err" *ngIf="loginForm.get('email')?.getError('email')">Error message with clear instruction<i class="fa-solid fa-circle-exclamation"></i></p>
+            </div>
+            <label class="text-black-50 mb-2" for="password">{{"password" | translate}} <span class = "text-danger">*</span></label>
+            <div class="custom-input">
+              <img (click)="togglePass()"  id="eye" src="../../../assets/icons/Icon ionic-ios-eye.svg" alt="eye">
+              <input formControlName = "password"  id="password" type="password" placeholder='{{"holderPass" | translate}}' class="form-control mb-5" />
+            </div>
+            <div class="forget mt-4">
+              <label for="remmember">
+                <input type="checkbox" id="remmember"/>
+                <span class="text-black-50">{{"remmember" | translate}}</span>
+              </label>
+              <a routerLink="/forget-pass">{{"forgetPass" | translate}}</a>
+            </div>
+            <button class="btn  mt-4 mb-4 w-100">{{"login" | translate}}</button>
+            <div class="have-account">
+              <span class="text-black-50">{{"haven'tAccount" | translate}}</span>
+              <a routerLink="/register">{{"register" | translate}}</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

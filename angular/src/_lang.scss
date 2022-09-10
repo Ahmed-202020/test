@@ -1,0 +1,19 @@
+//dir
+
+$right: right;
+$left: left;
+$dir: rtl;
+
+@if($dir == ltr) {
+  $left: left;
+  $right: right;
+}@else {
+  $left: right;
+  $right: left;
+}
+
+
+
+
+
+

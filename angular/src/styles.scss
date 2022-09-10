@@ -1,0 +1,39 @@
+@import "./vars" ;
+@import "./lang";
+
+html[dir="rtl"] {
+  .login {
+    .sign {
+      .form-group {
+        .forget {
+          justify-content: center !important;
+        }
+      }
+    }
+  }
+}
+html[dir = "ltr"]{
+  .footer{
+    .row{
+      img{
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+}
+    }
+  }
+}
+body{
+  font-size: 17pt;
+  background-color: $bg-white;
+  a{
+    text-decoration: none;
+  }
+}
+.pointer{
+  cursor: pointer;
+}
+
+
